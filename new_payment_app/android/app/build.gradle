@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33 // Use the latest SDK version
+
+    defaultConfig {
+        applicationId "com.yourapp.package"
+        minSdk 21 // Adjust according to your needs
+        targetSdk 33 // Use the latest SDK version
+        versionCode 1
+        versionName "1.0"
+
+        // Include other configurations if needed
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1' // Use the latest version
+    implementation 'com.google.android.material:material:1.6.0' // Use the latest version
+    // Add other dependencies as needed
+}

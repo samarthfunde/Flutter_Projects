@@ -1,0 +1,18 @@
+part of 'home_cubit.dart';
+
+abstract class HomeState {}
+
+// Define the different states that extend HomeState
+class HomeInitialState extends HomeState {}
+
+class HomeLoadingState extends HomeState {}
+
+class HomeLoadedState extends HomeState {
+  List<PhotoModel> listPhotos;
+  HomeLoadedState({required this.listPhotos});
+}
+
+class HomeErrorState extends HomeState {
+  String errorMsg;
+  HomeErrorState({required this.errorMsg});
+}
